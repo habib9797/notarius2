@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Единая нотариальная информационная система</title>
+		<style>
+			body {
+				margin: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				background-color: #f0f0f0;
+				font-family: Arial, sans-serif;
+			}
+
+			.container {
+				display: grid;
+				grid-template-columns: 20% 60% 20%;
+				width: 100%;
+				height: 100vh;
+			}
+
+			.left,
+			.right {
+				background-color: #ffffff;
+			}
+
+			.middle {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.header {
+				background-color: #ffffff;
+				margin: 10px;
+				padding: 10px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			}
+
+			.header img {
+				width: 100%;
+				height: auto;
+			}
+
+			.main-footer-wrapper {
+				display: flex;
+				justify-content: space-between;
+				margin: 10px;
+			}
+
+			.content {
+				flex: 7;
+				margin-right: 10px;
+				background-color: #ffffff;
+				padding: 10px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			}
+
+			.content table {
+				width: 100%;
+				border-collapse: collapse;
+			}
+
+			.content th,
+			.content td {
+				border: 1px solid #000;
+				padding: 10px;
+			}
+
+			/* Стили для чередующихся строк */
+			.content tr:nth-child(odd) {
+				background-color: #f9f9f9;
+			}
+
+			.content tr:nth-child(even) {
+				background-color: #ffffff;
+			}
+
+			/* Стили для заголовков */
+			.content th {
+				background-color: #e6f7ff;
+				font-weight: bold;
+				text-align: left;
+			}
+
+			/* Стили для текста */
+			.content td {
+				color: #333;
+				font-size: 14px;
+			}
+
+			.footer {
+				flex: 3;
+				background-color: #ffffff;
+				padding: 10px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			}
+
+			.footer img {
+				width: 100%;
+				height: auto;
+			}
+
+			/* Стиль заголовка "Проверка нотариального действия" */
+			.title {
+				text-align: center;
+				font-size: 20px;
+				font-weight: bold;
+				margin: 20px 0;
+				color: #333;
+			}
+
+			/* Стиль для жёлтого уведомления */
+			.warning {
+				background-color: #fff3cd;
+				color: #856404;
+				padding: 10px;
+				border: 1px solid #ffeeba;
+				border-radius: 5px;
+				margin: 10px 0;
+			}
+
+			/* Стиль уникального номера */
+			.unique-number {
+				text-align: center;
+				font-size: 12px;
+				color: #666;
+				margin-top: 10px;
+			}
+
+			/* Адаптивные стили */
+			@media screen and (max-width: 768px) {
+				/* Изменение структуры колонок на 1 колонку на экранах шириной менее 768px */
+				.container {
+					grid-template-columns: 1fr;
+					height: auto;
+				}
+
+				.main-footer-wrapper {
+					flex-direction: column;
+					margin: 0;
+				}
+
+				.content,
+				.footer {
+					margin: 10px 0;
+					padding: 10px;
+					width: 100%;
+				}
+			}
+
+			@media screen and (max-width: 480px) {
+				/* Дополнительная адаптация для мобильных устройств с шириной менее 480px */
+				.content td,
+				.content th {
+					padding: 8px;
+					font-size: 12px;
+				}
+
+				.title {
+					font-size: 18px;
+				}
+
+				.warning {
+					font-size: 14px;
+				}
+
+				.unique-number {
+					font-size: 10px;
+				}
+
+				.header img {
+					width: 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="left"></div>
+
+			<div class="middle">
+				<!-- Header Section with Image -->
+				<div class="header">
+					<img src="images/h1.jpg" alt="Header Image" />
+				</div>
+
+				<!-- Жёлтое уведомление -->
+				<div class="warning">
+					Внимание! Убедитесь, в том что адрес сайта в адресной строке -
+					https://enis.kz/
+				</div>
+
+				<!-- Заголовок -->
+				<div class="title">Проверка нотариального действия</div>
+
+				<!-- Main Content and Footer Section as Columns -->
+				<div class="main-footer-wrapper">
+					<!-- Main Content Section -->
+					<div class="content">
+						<table>
+							<tr>
+								<th>Тип действия</th>
+								<td>Договор аренды</td>
+							</tr>
+							<tr>
+								<th>Статус</th>
+								<td>Действительно</td>
+							</tr>
+							<tr>
+								<th>Реестровый номер</th>
+								<td>2883-1493</td>
+							</tr>
+							<tr>
+								<th>Дата совершения</th>
+								<td>01.08.2023, 18:40:00</td>
+							</tr>
+							<tr>
+								<th>Нотариус</th>
+								<td>ЖҰМАХАН БАУЫРЖАН ТАҢАТҰЛЫ</td>
+							</tr>
+							<tr>
+								<th>Участники</th>
+								<td>
+									Сторона 1: АХМЕДОВА АЛИЯ ХОДЖАБАЕВНА<br />
+									Дата рождения: 16.06.1995<br />
+									Уроженец: Узбекистан, Каракалпакстан<br /><br />
+									Сторона 2: ЖАРАСОВА МЕРУЕРТ ЕРМЕКҚЫЗЫ<br />
+									Дата рождения: 25.08.1990<br />
+									Уроженец: Казахстан, Жамбылская область
+								</td>
+							</tr>
+						</table>
+					</div>
+
+					<!-- Footer Section (Placeholder for Vertical Image) -->
+					<div class="footer">
+						<!-- Вертикальная картинка будет добавлена здесь -->
+						<img src="images/f2.jpg" alt="Header Image" />
+					</div>
+				</div>
+
+				<!-- Уникальный номер нотариального действия -->
+				<div class="unique-number">
+					Уникальный номер нотариального действия: ZZ9503026240913184046W92447A
+				</div>
+			</div>
+
+			<div class="right"></div>
+		</div>
+	</body>
+</html>
